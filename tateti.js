@@ -1,9 +1,10 @@
 const ip = "192.168.1.191";
 const port = "1000";
+const uri = "tateti-1ced14d0dfda.herokuapp.com";
 
 const myUsername = prompt("Please enter your name") || "Anonymous";
 const socket = new WebSocket(
-  `ws://${ip}:${port}/tateti?username=${myUsername}`
+  `ws://${uri}/tateti?username=${myUsername}`
 );
 
 socket.onmessage = (m) => {
