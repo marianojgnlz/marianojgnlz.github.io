@@ -4,7 +4,7 @@ const uri = "tateti-1ced14d0dfda.herokuapp.com";
 
 const myUsername = prompt("Please enter your name") || "Anonymous";
 const socket = new WebSocket(
-  `ws://${uri}/tateti?username=${myUsername}`
+  `wss://${uri}/tateti?username=${myUsername}`
 );
 
 socket.onmessage = (m) => {
